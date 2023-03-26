@@ -45,5 +45,28 @@ public class GameTest {
         Assertions.assertEquals(24 ,g.score() );
     }
 
+    @Test
+    public void fullGame_given12Strike_shouldGive300(){
+        int points =0;
+        Game g = new Game();
+        for(int i = 0; i<12; i++){
+            g.roll(10);
+        }
+        Assertions.assertEquals(300 ,g.score());
+    }
+
+    @Test
+    public void checkStrikeOrSpare_given0and10_shouldGiveSpare(){
+        int points =0;
+        Game g = new Game();
+        g.roll(0);
+        g.roll(10);
+        g.roll(4);
+        for(int i = 0; i<17; i++){
+            g.roll(0);
+        }
+        Assertions.assertEquals(18 ,g.score() );
+    }
+
 
 }

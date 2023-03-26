@@ -5,7 +5,7 @@ public class Frame {
     private List<Integer> rolls;
 
     public Frame() {
-        rolls = new ArrayList<>(2);
+        rolls = new ArrayList<>();
     }
 
     public List<Integer> getRolls() {
@@ -20,11 +20,19 @@ public class Frame {
             rolls.add(pins);
     }
     public Integer getScoreFrame(){
+        int score = 0;
+        for (Integer roll: rolls) {
+            score += roll;
+        }
+
+        return score;
+        /*
         if(rolls.size() == 2){
             return rolls.get(0) + rolls.get(1);
         } else {
             return rolls.get(0);
         }
+        */
 
     }
 }
