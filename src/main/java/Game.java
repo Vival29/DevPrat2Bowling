@@ -24,6 +24,7 @@ public class Game {
 
     public int score() {
         int totalScore = 0;
+
         for (int i = 0; i < 2; i++) {
             //if(frames.get(i).getRolls().get(0) == 10 ){
                 //totalScore += 10 + frames.get(i+1).getScoreFrame();
