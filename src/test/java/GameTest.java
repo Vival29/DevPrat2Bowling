@@ -27,6 +27,9 @@ public class GameTest {
         g.roll(5);
         g.roll(5);
         g.roll(3);
+        for(int i = 0; i<17; i++){
+            g.roll(0);
+        }
         Assertions.assertEquals(16 ,g.score() );
     }
 

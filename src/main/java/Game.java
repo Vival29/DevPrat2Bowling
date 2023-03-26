@@ -16,7 +16,7 @@ public class Game {
         }
         frame.addRoll(pins);
 
-        if(pins == 10 || frame.getRolls().size() == 2 || (!frames.isEmpty() && frame.getRolls().size() == 1)) {
+        if(pins == 10 || frame.getRolls().size() == 2 ) { //|| (!frames.isEmpty() && frame.getRolls().size() == 1)
             frames.add(frame);
         }
         n++;
@@ -25,7 +25,7 @@ public class Game {
     public int score() {
         int totalScore = 0;
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 10; i++) {
             //if(frames.get(i).getRolls().get(0) == 10 ){
                 //totalScore += 10 + frames.get(i+1).getScoreFrame();
             if(frames.get(i).getScoreFrame() == 10 ){
