@@ -62,12 +62,9 @@ public class Game {
                     totalScore += frames.get(i).getScoreFrame();
                 }
                 // Si spare
-            } else if (frames.get(i).getScoreFrame() == 10) {
+            } else if (isSpare(i)) {
                 if (i < 9) {
                     totalScore += frames.get(i).getScoreFrame() + frames.get(i + 1).getRolls().get(0);
-                }
-                if (i == 9) {
-                    totalScore += frames.get(i).getScoreFrame();
                 }
             } else {
                 totalScore += frames.get(i).getScoreFrame();

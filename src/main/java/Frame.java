@@ -12,10 +12,6 @@ public class Frame {
         return rolls;
     }
 
-    public void setRolls(List<Integer> rolls) {
-        this.rolls = rolls;
-    }
-
     public void addRoll(Integer pins) {
         rolls.add(pins);
     }
