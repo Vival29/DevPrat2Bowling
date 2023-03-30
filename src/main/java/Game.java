@@ -58,14 +58,15 @@ public class Game {
                     int sum = frames.get(i).getScoreFrame() + frames.get(i + 1).getRolls().get(0) + frames.get(i + 1).getRolls().get(1);
                     totalScore += sum;
                 }
-                if(i>8){
+                if (i > 8) {
                     totalScore += frames.get(i).getScoreFrame();
                 }
                 // Si spare
             } else if (frames.get(i).getScoreFrame() == 10) {
-                if(i<9) {
+                if (i < 9) {
                     totalScore += frames.get(i).getScoreFrame() + frames.get(i + 1).getRolls().get(0);
-                } if (i==9){
+                }
+                if (i == 9) {
                     totalScore += frames.get(i).getScoreFrame();
                 }
             } else {

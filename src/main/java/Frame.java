@@ -16,23 +16,16 @@ public class Frame {
         this.rolls = rolls;
     }
 
-    public void addRoll(Integer pins){
-            rolls.add(pins);
+    public void addRoll(Integer pins) {
+        rolls.add(pins);
     }
-    public Integer getScoreFrame(){
+
+    public Integer getScoreFrame() {
         int score = 0;
-        for (Integer roll: rolls) {
+        for (Integer roll : rolls) {
             score += roll;
         }
-
         return score;
-        /*
-        if(rolls.size() == 2){
-            return rolls.get(0) + rolls.get(1);
-        } else {
-            return rolls.get(0);
-        }
-        */
 
     }
 }
